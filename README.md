@@ -16,17 +16,17 @@ Apache Maven 3.x
 3.Run the following SQL script in the starwars schema to create the planets table and insert some sample data:
 sql
 Copy code
-``
-CREATE TABLE starwars.planets (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(255) NOT NULL,
-  `climate` VARCHAR(255) NOT NULL,
-  `terrain` VARCHAR(255) NOT NULL,
-  PRIMARY KEY (`id`));
 
-INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "arid", "desert");
-INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperate", "grasslands, mountains");
-``
+  CREATE TABLE starwars.planets (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `climate` VARCHAR(255) NOT NULL,
+    `terrain` VARCHAR(255) NOT NULL,
+    PRIMARY KEY (`id`));
+
+  INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "arid", "desert");
+  INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperate", "grasslands, mountains");
+
 4.Open a command prompt or terminal and navigate to the project root directory.
 5.Run the command mvn clean package to build the application and create a WAR file.
 6.Deploy the WAR file to a web server or run the application locally using the embedded Jetty server by running the command mvn jetty:run.
