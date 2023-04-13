@@ -27,8 +27,8 @@ Apache Maven 3.x
 	terrain VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id));
 
-INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "árido", "deserto");
-INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperado", "planícies, montanhas");
+	INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "arid", "desert");
+  	INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperate", "grasslands, mountains");
 
 4.Abra um prompt de comando ou terminal e navegue até o diretório raiz do projeto.
 
@@ -61,15 +61,15 @@ Apache Maven 3.x
 
 3.Run the following SQL script in the starwars schema to create the planets table and insert some sample data:
 
-  CREATE TABLE starwars.planets (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL,
-    `climate` VARCHAR(255) NOT NULL,
-    `terrain` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (`id`));
+	CREATE TABLE starwars.planets (
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	climate VARCHAR(255) NOT NULL,
+	terrain VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id));
 
-  INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "arid", "desert");
-  INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperate", "grasslands, mountains");
+  	INSERT INTO planets (id, name, climate, terrain) VALUES (1, "Tatooine", "arid", "desert");
+  	INSERT INTO planets (id, name, climate, terrain) VALUES (2, "Alderaan", "temperate", "grasslands, mountains");
 
 4.Open a command prompt or terminal and navigate to the project root directory.
 
