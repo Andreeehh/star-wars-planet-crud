@@ -1,0 +1,5 @@
+Para correção de um erro -> 
+Criar uma nova branch "hotfix/{nomedoerro}" a partir da branch "master"
+Para criação de uma nova funcionalidade ->
+Criar uma nova branch "feature/{nomedafuncionalidade}" a partir da branch "develop"
+E assim que os commits e testes forem concluídos, fazer o merge com suas respectivas branch's de origem
