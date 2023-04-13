@@ -1,5 +1,3 @@
-# star-wars-planet-crud
-Projeto de CRUD utilizando JSF + Primefaces com get na api https://swapi.dev/about
 # **Star Wars Planets CRUD Application**
 ## Introduction
 This is a Java web application built using JavaServer Faces (JSF) and PrimeFaces framework. The application provides a CRUD (Create, Read, Update, Delete) functionality for Star Wars planets. The planets data is stored in a MySQL database.
