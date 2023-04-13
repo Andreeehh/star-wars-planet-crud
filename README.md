@@ -8,8 +8,11 @@ This is a Java web application built using JavaServer Faces (JSF) and PrimeFaces
 To run the application, you will need:
 
 Java Development Kit (JDK) 11 or later
+
 MySQL 8.x
+
 Apache Maven 3.x
+
 ## Setup
 
 1.Clone the repository to your local machine.
