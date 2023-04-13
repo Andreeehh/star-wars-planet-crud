@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Edit Planet</title>
+	<style>
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
+</h:head>
+
+<h:body>
+
+	<f:view>
+
+		<h:form id="editForm">
+			<p:outputLabel
+				value="Edite o planeta: ${planetSelectionBean.selectedPlanet.name}"
+				style="font-size: 30px; background-color: #add8e6; color: #fff; border-radius: 5px;" />
+			<p:panelGrid columns="2">
+				<p:outputLabel for="name" value="Nome" />
+				<p:inputText id="name"
+					value="#{planetSelectionBean.selectedPlanet.name}" required="true" />
+
+				<p:outputLabel for="climate" value="Clima" />
+				<p:inputText id="climate"
+					value="#{planetSelectionBean.selectedPlanet.climate}"
+					required="true" />
+
+				<p:outputLabel for="terrain" value="Terreno" />
+				<p:inputText id="terrain"
+					value="#{planetSelectionBean.selectedPlanet.terrain}"
+					required="true" />
+
+				<p:commandButton value="Salvar"
+					action="#{planetSelectionBean.updatePlanet}" />
+				<p:commandButton value="Cancelar" action="index" immediate="true" />
+			</p:panelGrid>
+
+		</h:form>
+
+	</f:view>
+
+</h:body>
+
+</html>

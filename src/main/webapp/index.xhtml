@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Planet List</title>
+	<style>
+.table-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F9F9F9;
+	padding: 20px;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.ui-datatable {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #FFF;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+</style>
+</h:head>
+<h:body>
+	<div class="table-container">
+		<h:form>
+			<h:panelGrid columns="2">
+				<p:inputText id="filter" value="#{planetBean.filter}" />
+				<p:commandButton value="Procurar por id/nome" action="#{planetBean.filterPlanetsByNameOrId}" update="planetDataTable" />
+			</h:panelGrid>
+			<br />
+			<br />
+			<p:dataTable id="planetDataTable" value="#{planetBean.planets}" var="planet">
+				<p:column headerText="ID">
+					<h:outputText value="#{planet.id}" />
+				</p:column>
+				<p:column headerText="Nome">
+					<h:outputText value="#{planet.name}" />
+				</p:column>
+				<p:column headerText="Clima">
+					<h:outputText value="#{planet.climate}" />
+				</p:column>
+				<p:column headerText="Terreno">
+					<h:outputText value="#{planet.terrain}" />
+				</p:column>
+				<p:column headerText="Nº de Filmes">
+					<h:outputText value="#{planet.numFilms}" />
+				</p:column>
+				<p:column headerText="Ações">
+					<h:commandButton value="Editar"
+						action="#{planetBean.editPlanet(planet)}">
+						<f:setPropertyActionListener
+							target="#{planetSelectionBean.selectedPlanet}" value="#{planet}" />
+					</h:commandButton>
+					<h:commandButton value="Deletar"
+						action="#{planetBean.deletePlanet(planet)}" />
+				</p:column>
+			</p:dataTable>
+			<br />
+			<br />
+			<p:commandButton value="Adicionar novo Planeta"
+				action="create.xhtml?faces-redirect=true" />
+		</h:form>
+	</div>
+</h:body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Create Planet</title>
+	<style>
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+</style>
+</h:head>
+<h:body>
+	<h:form>
+		<p:outputLabel value="Criando o planeta"
+			style="font-size: 55px; background-color: #add8e6; color: #fff; padding: 5px; border-radius: 5px;" />
+		<br />
+		<br />
+		<p:panelGrid columns="2">
+			<p:outputLabel for="name" value="Nome:" />
+			<p:inputText id="name" value="#{planetBean.planet.name}"
+				required="true" />
+
+			<p:outputLabel for="climate" value="Clima:" />
+			<p:inputText id="climate" value="#{planetBean.planet.climate}"
+				required="true" />
+
+			<p:outputLabel for="terrain" value="Terreno:" />
+			<p:inputText id="terrain" value="#{planetBean.planet.terrain}"
+				required="true" />
+			<p:commandButton value="Adicionar" action="#{planetBean.savePlanet()}" />
+			<p:commandButton value="Cancelar" action="index" immediate="true" />
+
+		</p:panelGrid>
+
+
+	</h:form>
+</h:body>
+</html>
