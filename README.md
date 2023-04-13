@@ -17,7 +17,7 @@ Apache Maven 3.x
 sql
 Copy code
 ``
-CREATE TABLE `starwars`.`**planets` (
+CREATE TABLE starwars.planets (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NOT NULL,
   `climate` VARCHAR(255) NOT NULL,
